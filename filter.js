@@ -4,7 +4,7 @@ let dir = process.argv[2];
 let ext = `.${process.argv[3]}`;
 
 let read = fs.readdir(dir, (err, data) => {
-
+if (err) console.log(err);
   let len = data.length;
   for (let i = 0; i < len; i++){
     let file = data[i];
